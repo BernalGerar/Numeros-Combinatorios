@@ -1,0 +1,36 @@
+name: Compilar LaTeX a PDF automáticamente
+
+on:
+  push:
+    branches:
+      - main  # Cambia por master si tu rama se llama así
+
+permissions:
+  contents: write
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Compilar documento LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Ncombinatorios.tex  # Reemplaza 'documento.tex' por el nombre de tu archivo
+
+      - name: Guardar PDF en el repositorio
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          git merge origin main --allow-unrelated-histories
+          mkdir -p PDFs
+          mv Ncombinatorios.pdf PDFs/
+          git add PDFs/Ncombinatorios.pdf
+          git commit -m "Actualiza el PDF compilado automáticamente [skip ci]" || exit 0
+          git push origin HEAD:main
+          
+          git commit -m "Actualiza el PDF compilado automáticamente [skip ci]" || exit 0
+          git push origin HEAD:main
