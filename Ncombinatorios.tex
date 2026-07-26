@@ -42,11 +42,26 @@ del binomio de Newton:
 \end{equation}
 
 A los números $\binom{n}{m}$ se los llama números combinatorios, con $ 0 \le m \le n$. Y se calculan así:
-\begin{teorema}[Cálculo de los números combinatorios]
+\begin{teorema}
     Se verifica la siguiente igualdad para $ 0 \le m \le n$
-    \begin{equation}
-        \binom{n}{m} = \displaystyle\frac{n!}{m!(n-m)!}
-    \end{equation}
+    \[
+    \binom{n}{m} = \frac{n!}{m!(n-m)!}
+    \]
 \end{teorema}
+
+Antes de ver la demostración, veamos unas consecuencias sencillas de ésta identidad.
+\begin{enumerate}
+    \item Se tiene
+    \[
+    \binom{n}{m} = \binom{n}{n-m}.
+    \]
+    En efecto, $\binom{n}{m} = \frac{n!}{m!(n-m)!} = \frac{n!}{(n-(n-m))!(n-m)!} = \binom{n}{n-m}.$
+    
+    \item Tambien tenemos la siguiente igualdad para $0 < m < n$
+    \[
+    \binom{n+1}{m+1} = \binom{n}{m} + \binom{n}{m+1}.
+    \]
+    Tenemos que $\binom{n+1}{m+1} = \frac{(n+1)!}{(m+1)!(n-m)!} = \frac{(m+1)+(n-m)}{m+1}\cdot\binom{n}{m} = \binom{n}{m} + \binom{n}{m+1}$
+\end{enumerate}
 
 \end{document}
