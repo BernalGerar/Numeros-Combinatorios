@@ -1,5 +1,19 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc} % Para admitir tildes correctamente
+\usepackage[spanish]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{thmtools}
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+
+\theoremstyle{definition}
+\newtheorem{definicion}{Definición}[section]
+\newtheorem{formula}[teorema]{Fórmula}
 
 \begin{document}
 
@@ -8,5 +22,31 @@
 \maketitle
 
 \section{Introducción}
+Los números combinatorios $\binom{n}{k}$ aparecen al estudiar los coeficientes que van apareciendo en:
+\begin{align*}
+(a+b)^0 &= 1 \\
+(a+b)^1 &= a + b \\
+(a+b)^2 &= a^2 + 2ab + b^2 \\
+(a+b)^3 &= a^3 + 3a^2b + 3ab^2 + b^3 \\
+(a+b)^4 &= a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4 \\
+&\ \vdots
+\end{align*}
+
+Este desarrollo puede hacerse en cualquier anillo conmutativo.
+Notemos que todos los sumandos de $(a+b)^n$ serán de la forma $a^{n-m}b^m$, y llamando $\binom{n}{m}$
+al número que resulta de juntar todos los elementos iguales a $a^{n-m}b^m$, tenemos lo que se llama fórmula
+del binomio de Newton:
+
+\begin{equation}
+(a+b)^n = \displaystyle\sum_{m=0}^n \binom{n}{m}a^{n-m}b^m.
+\end{equation}
+
+A los números $binom{n}{m}$ se los llama números combinatorios, con $ 0 \leq m < n$. Y se calculan así:
+\begin{teorema}[Cálculo de los números combinatorios]
+    Se verifica la siguiente igualdad para $ 0 \leq m < n$
+    \begin{equation}
+        \binom{n}{m} = \displaystyle\frac{n!}{m!(n-m)!}
+    \end{equation}
+\end{teorema}
 
 \end{document}
