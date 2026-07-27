@@ -57,18 +57,24 @@ Antes de ver la demostración, veamos unas consecuencias sencillas de ésta iden
     \]
     En efecto, $\binom{n}{m} = \frac{n!}{m!(n-m)!} = \frac{n!}{(n-(n-m))!(n-m)!} = \binom{n}{n-m}.$
     
-    \item Tambien tenemos la siguiente igualdad para $0 < m < n$
+    \item También tenemos la siguiente igualdad para $0 < m < n$
     \[
     \binom{n+1}{m+1} = \binom{n}{m} + \binom{n}{m+1}.
     \]
     Tenemos que $\binom{n+1}{m+1} = \frac{(n+1)!}{(m+1)!(n-m)!} = \frac{(m+1)+(n-m)}{m+1}\cdot\binom{n}{m} = \binom{n}{m} + \binom{n}{m+1}$.
-    Vamos a usar éste hecho para demostrar el teorema precedente, pero no podemos usarla así como está.
+    Vamos a usar este hecho para demostrar el teorema precedente, pero no podemos usarla así como está.
     Por tanto, presentamos una demostración alternativa.
-    Por un lado tenemos que $(a+b)^{n+1} = a(a+b)^n + b(a+b)^n$
-    $\binom{n}{0}a^{n+1} + \binom{n}{1}a^nb + \cdots + \binom{n}{n-1}a^2b^{n-1} + \binom{n}{n}ab^n + $
-    $\binom{n}{0}a^nb + \binom{n}{1}a^{n-1}b^2 + \cdots + \binom{n}{n-1}ab^n + \binom{n}{n}b^{n+1}.$
-    Pero por otro lado tenemos $(a+b)^{n+1} = \binom{n+1}{0}a^{n+1} + \binom{n+1}{1}a^nb + \cdots + \binom{n+1}{n}ab^n + \binom{n+1}{n+1}b^{n+1}$
-    Lo que muestra que $\binom{n+1}{1} = \binom{n}{0} + \binom{n}{1} \cdots$, $\binom{n+1}{n} = \binom{n}{n} + \binom{n}{n-1}$
+    Por un lado tenemos que 
+    \begin{align*}
+    (a+b)^{n+1} &= a(a+b)^n + b(a+b)^n \\
+    &= \binom{n}{0}a^{n+1} + \binom{n}{1}a^nb + \cdots + \binom{n}{n-1}a^2b^{n-1} + \binom{n}{n}ab^n \\
+    &+ \binom{n}{0}a^nb + \binom{n}{1}a^{n-1}b^2 + \cdots + \binom{n}{n-1}ab^n + \binom{n}{n}b^{n+1},
+    \end{align*}
+    pero por el otro 
+    \[
+    (a+b)^{n+1} = \binom{n+1}{0}a^{n+1} + \binom{n+1}{1}a^nb + \cdots + \binom{n+1}{n}ab^n + \binom{n+1}{n+1}b^{n+1},
+    \]
+    Lo que muestra que $\binom{n+1}{1} = \binom{n}{0} + \binom{n}{1}$, $\cdots$, $\binom{n+1}{n} = \binom{n}{n} + \binom{n}{n-1}.$
 \end{enumerate}
 
 \end{document}
