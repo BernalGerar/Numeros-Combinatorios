@@ -89,4 +89,22 @@ Antes de ver la demostración, veamos unas consecuencias sencillas de ésta iden
     que los casos $\binom{1}{0}\, \binom{1}{1}$ ya están demostrados.
 \end{proof}
 
+Una vez vista una interpretación posible de los números combinatorios y cómo se calculan, una pregunta 
+que puede surgir es: ¿Cómo serán los coeficientes de la expresión $(a+b+c)^n$ y cómo calcularlos?. O más
+generalmente, podemos preguntarnos lo mismo para la expresión $(a_1 + \cdots + a_r)^n$. Al igual que ocurre 
+con los números combinatorios, todos los sumandos de $(a+b+c)^n$ son de la forma 
+$a^{n_1}b^{n_2}c^{n_3}$ con $n_1 + n_2 + n_3 = n$, $0 \le n_i$ y denotando por $\binom{n}{n_1, n_2, n_3}$ al 
+número de sumandos iguales a $a^{n_1}b^{n_2}c^{n_3}$ obtenemos una versión general de la formula del 
+binomio de Newton:
+
+\[
+(a+b+c)^n = 
+\sum_{\substack{
+    n_1+n_2+n_3=n \\
+    n_i \ge 0
+}}
+\binom{n}{n_1, n_2, n_3}
+a^{n_1}b^{n_2}c^{n_3}.
+\]
+
 \end{document}
