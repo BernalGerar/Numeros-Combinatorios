@@ -94,7 +94,7 @@ que puede surgir es: ¿Cómo serán los coeficientes de la expresión $(a+b+c)^n
 generalmente, podemos preguntarnos lo mismo para la expresión $(a_1 + \cdots + a_r)^n$. Al igual que ocurre 
 con los números combinatorios, todos los sumandos de $(a+b+c)^n$ son de la forma 
 $a^{n_1}b^{n_2}c^{n_3}$ con $n_1 + n_2 + n_3 = n$, $0 \le n_i$ y denotando por $\binom{n}{n_1, n_2, n_3}$ al 
-número de sumandos iguales a $a^{n_1}b^{n_2}c^{n_3}$ obtenemos una versión general de la formula del 
+número de veces que aparece el sumando $a^{n_1}b^{n_2}c^{n_3}$ obtenemos una versión general de la fórmula del 
 binomio de Newton:
 
 \[
@@ -105,6 +105,19 @@ binomio de Newton:
 }}
 \binom{n}{n_1, n_2, n_3}
 a^{n_1}b^{n_2}c^{n_3}.
+\]
+
+A los números $\binom{n}{n_1, n_2, n_3}$ se los llama números trinomiales o coeficientes trinomiales.
+Vamos a ver como calcularlos todos. Para ello fijamos un $n\ge 1$ y tambien números naturales 
+$n_1 + n_2 + n_3 = n$, entonces vamos a ver cuantos sumandos $a^{n_1}b^{n_2}c^{n_3}$ aparecen.
+Primero contemos de cuantas maneras podemos disponer $n_1$ letras iguales a $a$ en un total de
+$n$ espacios disponibles. Ese número es $\displaystyle\frac{n!}{n_1!(n - n_1)!} = \frac{n!}{n_1!(n_2 + n_3)!}$.
+Pero, para cada una de esas posibilidades necesitamos contar de cuantas formas podemos disponer las $n_2$ y 
+$n_3$ letras $b$ y $c$ en el total de $n - n_1 = n_2 + n_3$ espacios que sobran. Ese número de formas
+son iguales en cada una de las elecciones anteriores, y vale $\displaystyle\frac{(n_2 + n_3)!}{n_2!n_3!}$.
+Multiplicando ambos números hemos probado que:
+\[
+\binom{n}{n_1, n_2, n_3} = \frac{n!}{n_1!(n_2 + n_3)!}\frac{(n_2 + n_3)!}{n_2!n_3!} = \frac{n!}{n_1!n_2!n_3!}
 \]
 
 \end{document}
