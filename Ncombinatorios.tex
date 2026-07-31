@@ -123,7 +123,7 @@ Multiplicando ambos números hemos probado que:
 Estos números tienen propiedades analogas a las de los combinatorios. Veamos las más básicas.
 
 \begin{enumerate}
-    \item Se tiene para cualquier cuatrupla de números $n, n_1, n_2, n_3$:
+    \item Se tiene para cualesquiera números $0 \le n_1, n_2, n_3 < n$:
     \[
     \binom{n+1}{n_1 + 1, n_2 + 1, n_3 + 1}
     = 
@@ -133,7 +133,33 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
     +
     \binom{n}{n_1, n_2 + 1, n_3 + 1}
     \]
-    En efecto. Antes de la demostración convine recordar que, por definición,
+    Para cualesquiera números $0 \le n_1, n_2 < n$ se tiene:
+    \begin{align*}
+        \binom{n+1}{n_1 + 1, n_2 + 1, 0}
+        =
+        \binom{n}{n_1 + 1, n_2, 0}
+        +
+        \binom{n+1}{n_1, n_2 + 1, 0} \\
+        \binom{n+1}{n_1 + 1, 0, n_2 + 1}
+        =
+        \binom{n}{n_1 + 1, 0, n_2}
+        +
+        \binom{n+1}{n_1, 0, n_2 + 1} \\
+        \binom{n+1}{0, n_1 + 1, n_2 + 1}
+        =
+        \binom{n}{0, n_1 + 1, n_2}
+        +
+        \binom{n+1}{0, n_1, n_2 + 1}
+    \end{align*}
+    Ademas para todo natural $n$:
+    \[
+    \binom{n}{n, 0, 0}
+    =
+    \binom{n}{0, n, 0}
+    =
+    \binom{n}{0, 0, n}
+    \]
+    Antes de la demostración conviene recordar que, por definición,
     $\binom{n}{n_1, n_2, n_3}$ implica que $n=n_1 + n_2 + n_3$.
     \begin{align*}
         &\binom{n}{n_1 + 1, n_2 + 1, n_3}
