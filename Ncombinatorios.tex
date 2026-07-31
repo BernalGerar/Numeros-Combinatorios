@@ -108,7 +108,7 @@ a^{n_1}b^{n_2}c^{n_3}.
 \]
 
 A los números $\binom{n}{n_1, n_2, n_3}$ se los llama números trinomiales o coeficientes trinomiales.
-Vamos a ver como calcularlos todos. Para ello fijamos un $n\ge 1$ y tambien números naturales 
+Vamos a ver cómo calcularlos todos. Para ello fijamos un $n\ge 1$ y también números naturales 
 $n_1 + n_2 + n_3 = n$, entonces vamos a ver cuantos sumandos $a^{n_1}b^{n_2}c^{n_3}$ aparecen.
 Primero contemos de cuantas maneras podemos disponer $n_1$ letras iguales a $a$ en un total de
 $n$ espacios disponibles. Ese número es $\displaystyle\frac{n!}{n_1!(n - n_1)!} = \frac{n!}{n_1!(n_2 + n_3)!}$.
@@ -117,7 +117,55 @@ $n_3$ letras $b$ y $c$ en el total de $n - n_1 = n_2 + n_3$ espacios que sobran.
 son iguales en cada una de las elecciones anteriores, y vale $\displaystyle\frac{(n_2 + n_3)!}{n_2!n_3!}$.
 Multiplicando ambos números hemos probado que:
 \[
-\binom{n}{n_1, n_2, n_3} = \frac{n!}{n_1!(n_2 + n_3)!}\frac{(n_2 + n_3)!}{n_2!n_3!} = \frac{n!}{n_1!n_2!n_3!}
+\binom{n}{n_1, n_2, n_3} = \frac{n!}{n_1!(n_2 + n_3)!}\cdot\frac{(n_2 + n_3)!}{n_2!n_3!} = \frac{n!}{n_1!n_2!n_3!}.
 \]
+
+Estos números tienen propiedades analogas a las de los combinatorios. Veamos las más básicas.
+
+\begin{enumerate}
+    \item Se tiene para cualquier cuatrupla de números $n, n_1, n_2, n_3$:
+    \[
+    \binom{n+1}{n_1 + 1, n_2 + 1, n_3 + 1}
+    = 
+    \binom{n}{n_1 + 1, n_2 + 1, n_3}
+    +
+    \binom{n}{n_1 + 1, n_2, n_3 + 1}
+    +
+    \binom{n}{n_1, n_2 + 1, n_3 + 1}
+    \]
+    En efecto. Antes de la demostración convine recordar que, por definición,
+    $\binom{n}{n_1, n_2, n_3}$ implica que $n=n_1 + n_2 + n_3$.
+    \begin{align*}
+        &\binom{n}{n_1 + 1, n_2 + 1, n_3}
+        +
+        \binom{n}{n_1 + 1, n_2, n_3 + 1}
+        +
+        \binom{n}{n_1, n_2 + 1, n_3 + 1}
+        = \\
+        &\frac{n!}{(n_1+1)!(n_2+1)!n_3!}
+        +
+        \frac{n!}{(n_1+1)!n_2!(n_3+1)!}
+        +
+        \frac{n!}{n_1!(n_2+1)!(n_3+1)!}
+        = \\
+        &(n_3 + 1)
+        \cdot
+        \frac{n!}{(n_1+1)!(n_2+1)!(n_3+1)!}
+        +
+        (n_2 + 1)
+        \cdot
+        \frac{n!}{(n_1+1)!(n_2+1)!(n_3+1)!}
+        +
+        (n_1 + 1)
+        \cdot
+        \frac{n!}{(n_1+1)!(n_2+1)!(n_3+1)!}
+        = \\
+        &\frac{n!(n_3 + 1 + n_2 + 1 + n_1 + 1)}{(n+1)!(n_2+1)!(n_3+1)!}
+        =
+        \frac{(n+1)!}{(n+1)!(n_2+1)!(n_3+1)!}
+        =
+        \binom{n+1}{n_1 + 1, n_2 + 1, n_3 + 1}
+    \end{align*}
+\end{enumerate}
 
 \end{document}
