@@ -35,7 +35,7 @@ Los números combinatorios $\binom{n}{k}$ aparecen al estudiar los coeficientes 
 \end{align*}
 
 Este desarrollo puede hacerse en cualquier anillo conmutativo.
-Notemos que todos los sumandos de $(a+b)^n$ serán de la forma $a^{n-m}b^m$, y llamando $\binom{n}{m}$
+Notemos que todos los sumandos de $(a+b)^n$ serán de la forma $a^{n-m}b^m$, y llamando $\tbinom{n}{m}$
 al número que resulta de juntar todos los elementos iguales a $a^{n-m}b^m$, tenemos lo que se llama fórmula
 del binomio de Newton:
 
@@ -57,13 +57,13 @@ Antes de ver la demostración, veamos unas consecuencias sencillas de ésta iden
     \[
     \binom{n}{m} = \binom{n}{n-m}.
     \]
-    En efecto, $\binom{n}{m} = \frac{n!}{m!(n-m)!} = \frac{n!}{(n-(n-m))!(n-m)!} = \binom{n}{n-m}.$
+    En efecto, $\tbinom{n}{m} = \frac{n!}{m!(n-m)!} = \frac{n!}{(n-(n-m))!(n-m)!} = \tbinom{n}{n-m}.$
     
     \item También tenemos la siguiente igualdad para $0 < m < n$
     \[
     \binom{n+1}{m+1} = \binom{n}{m} + \binom{n}{m+1}.
     \]
-    Tenemos que $\binom{n+1}{m+1} = \frac{(n+1)!}{(m+1)!(n-m)!} = \frac{(m+1)+(n-m)}{m+1}\cdot\binom{n}{m} = \binom{n}{m} + \binom{n}{m+1}$.
+    Tenemos que $\tbinom{n+1}{m+1} = \frac{(n+1)!}{(m+1)!(n-m)!} = \frac{(m+1)+(n-m)}{m+1}\cdot\tbinom{n}{m} = \tbinom{n}{m} + \tbinom{n}{m+1}$.
     Vamos a usar este hecho para demostrar el teorema precedente, pero no podemos usarla así como está.
     Por tanto, presentamos una demostración alternativa.
     Por un lado tenemos que 
@@ -76,24 +76,24 @@ Antes de ver la demostración, veamos unas consecuencias sencillas de ésta iden
     \[
     (a+b)^{n+1} = \binom{n+1}{0}a^{n+1} + \binom{n+1}{1}a^nb + \cdots + \binom{n+1}{n}ab^n + \binom{n+1}{n+1}b^{n+1},
     \]
-    Lo que muestra que $\binom{n+1}{1} = \binom{n}{0} + \binom{n}{1}$, $\dots$, $\binom{n+1}{n} = \binom{n}{n-1} + \binom{n}{n}.$
+    Lo que muestra que $\tbinom{n+1}{1} = \tbinom{n}{0} + \tbinom{n}{1}$, $\dots$, $\tbinom{n+1}{n} = \tbinom{n}{n-1} + \tbinom{n}{n}.$
 \end{enumerate}
 
 \begin{proof}
     Notemos que del desarrollo de $(a+b)^n$ aparece solo una vez el sumando $a^n$, y lo mismo para $b^n$ para todo $n$. Luego
-    basta ver que $\displaystyle\binom{n}{0} = \frac{n!}{0!(n-0)!} = 1$, $\displaystyle\binom{n}{n} = \frac{n!}{n!(n-n)!} = 1$.
-    Para los números de la forma $\binom{n}{m}$ con $0 < m < n$, razonamos por inducción sobre $n$, supongámoslo 
-    cierto para $n$, luego $\binom{n+1}{m+1} = \binom{n}{m} + \binom{n}{m+1}$ por la segunda alternativa
+    basta ver que $\displaystyle\tbinom{n}{0} = \frac{n!}{0!(n-0)!} = 1$, $\displaystyle\tbinom{n}{n} = \frac{n!}{n!(n-n)!} = 1$.
+    Para los números de la forma $\tbinom{n}{m}$ con $0 < m < n$, razonamos por inducción sobre $n$, supongámoslo 
+    cierto para $n$, luego $\tbinom{n+1}{m+1} = \tbinom{n}{m} + \tbinom{n}{m+1}$ por la segunda alternativa
     que dimos para $2$) y aplicando el mismo cálculo que efectuamos en la primera demostración, obtenemos que
-    $\displaystyle\binom{n+1}{m+1} = \frac{(n+1)!}{(m+1)!(n-m)!}$. Con ello concluye la demostración, teniendo en cuenta
-    que los casos $\binom{1}{0}\, \binom{1}{1}$ ya están demostrados.
+    $\displaystyle\tbinom{n+1}{m+1} = \frac{(n+1)!}{(m+1)!(n-m)!}$. Con ello concluye la demostración, teniendo en cuenta
+    que los casos $\tbinom{1}{0}\, \tbinom{1}{1}$ ya están demostrados.
 \end{proof}
 
 Una vez vista una interpretación posible de los números combinatorios y cómo se calculan, una pregunta 
 que puede surgir es: ¿Cómo serán los coeficientes de la expresión $(a+b+c)^n$ y cómo calcularlos?. O más
 generalmente, podemos preguntarnos lo mismo para la expresión $(a_1 + \cdots + a_r)^n$. Al igual que ocurre 
 con los números combinatorios, todos los sumandos de $(a+b+c)^n$ son de la forma 
-$a^{n_1}b^{n_2}c^{n_3}$ con $n_1 + n_2 + n_3 = n$, $0 \le n_i$ y denotando por $\binom{n}{n_1, n_2, n_3}$ al 
+$a^{n_1}b^{n_2}c^{n_3}$ con $n_1 + n_2 + n_3 = n$, $0 \le n_i$ y denotando por $\tbinom{n}{n_1, n_2, n_3}$ al 
 número de veces que aparece el sumando $a^{n_1}b^{n_2}c^{n_3}$ obtenemos una versión general de la fórmula del 
 binomio de Newton:
 
@@ -107,7 +107,7 @@ binomio de Newton:
 a^{n_1}b^{n_2}c^{n_3}.
 \]
 
-A los números $\binom{n}{n_1, n_2, n_3}$ se los llama números trinomiales o coeficientes trinomiales.
+A los números $\tbinom{n}{n_1, n_2, n_3}$ se los llama números trinomiales o coeficientes trinomiales.
 Vamos a ver cómo calcularlos todos. Para ello fijamos un $n\ge 1$ y también números naturales 
 $n_1 + n_2 + n_3 = n$, entonces vamos a ver cuantos sumandos $a^{n_1}b^{n_2}c^{n_3}$ aparecen.
 Primero contemos de cuantas maneras podemos disponer $n_1$ letras iguales a $a$ en un total de
@@ -179,7 +179,7 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
         =
         \binom{n+1}{n_1 + 1, n_2 + 1, n_3 + 1}
     \end{align*}
-    Recordemos que el coeficiente trinomial $\binom{n}{n_1 + 1, n_2 + 1, n_3}$ solo tiene sentido cuando
+    Recordemos que el coeficiente trinomial $\tbinom{n}{n_1 + 1, n_2 + 1, n_3}$ solo tiene sentido cuando
     $n_1 + 1 + n_2 + 1 + n_3 = n$, que es lo que usamos implícitamente en la demostración.
 \end{enumerate}
 
