@@ -181,6 +181,23 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
     \end{align*}
     Recordemos que el coeficiente trinomial $\tbinom{n}{n_1 + 1, n_2 + 1, n_3}$ solo tiene sentido cuando
     $n_1 + 1 + n_2 + 1 + n_3 = n$, que es lo que usamos implícitamente en la demostración.
+    Ademas, tenemos que.
+    \begin{align*}
+        &\binom{n+1}{n_1 + 1, n_2 + 1, 0}
+        =
+        \frac{(n+1)!}{(n_1+1)!(n_2+1)!} \\
+        &=
+        \frac{n + 1}{n_2 + 1}\cdot\binom{n}{n_1 + 1, n_2, 0}
+        =
+        \frac{(n_2 + 1) + (n_1 + 1)}{n_2 + 1}\cdot\binom{n}{n_1 + 1, n_2, 0} 
+        =\\
+    \end{align*}
+    \[
+    \binom{n}{n_1 + 1, n_2, 0} + \binom{n}{n_1, n_2 + 1, 0}
+    \]
+    Los otros dos casos se razonan analogamente. La última identidad es inmediata.
 \end{enumerate}
+
+%Llegados aquí 
 
 \end{document}
