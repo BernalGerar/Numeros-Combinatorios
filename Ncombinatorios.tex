@@ -185,16 +185,14 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
     \begin{align*}
         &\binom{n+1}{n_1 + 1, n_2 + 1, 0}
         =
-        \frac{(n+1)!}{(n_1+1)!(n_2+1)!} \\
-        &=
-        \frac{n + 1}{n_2 + 1}\cdot\binom{n}{n_1 + 1, n_2, 0}
+        \frac{(n+1)!}{(n_1+1)!(n_2+1)!}
         =
+        \frac{n + 1}{n_2 + 1}\cdot\binom{n}{n_1 + 1, n_2, 0} \\
+        &=
         \frac{(n_2 + 1) + (n_1 + 1)}{n_2 + 1}\cdot\binom{n}{n_1 + 1, n_2, 0} 
-        =\\
+        =
+        \binom{n}{n_1 + 1, n_2, 0} + \binom{n}{n_1, n_2 + 1, 0}
     \end{align*}
-    \[
-    \binom{n}{n_1 + 1, n_2, 0} + \binom{n}{n_1, n_2 + 1, 0}
-    \]
     Los otros dos casos se razonan analogamente. La última identidad es inmediata.
 \end{enumerate}
 
