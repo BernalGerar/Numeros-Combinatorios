@@ -159,8 +159,7 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
     =
     \binom{n}{0, 0, n}
     \]
-    Antes de la demostración conviene recordar que, por definición,
-    $\binom{m}{k_1, k_2, k_3}$ implica que $m=k_1 + k_2 + k_3$.
+    En efecto.
     \begin{align*}
         &\binom{n}{n_1 + 1, n_2 + 1, n_3}
         +
@@ -180,6 +179,8 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
         =
         \binom{n+1}{n_1 + 1, n_2 + 1, n_3 + 1}
     \end{align*}
+    Recordemos que el coeficiente trinomial $\binom{n}{n_1 + 1, n_2 + 1, n_3}$ solo tiene sentido cuando
+    $n_1 + 1 + n_2 + 1 + n_3 = n$, que es lo que usamos implícitamente en la demostración.
 \end{enumerate}
 
 \end{document}
