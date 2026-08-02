@@ -160,7 +160,7 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
     \binom{n}{0, 0, n}
     \]
     Antes de la demostración conviene recordar que, por definición,
-    $\binom{n}{n_1, n_2, n_3}$ implica que $n=n_1 + n_2 + n_3$.
+    $\binom{m}{k_1, k_2, k_3}$ implica que $m=k_1 + k_2 + k_3$.
     \begin{align*}
         &\binom{n}{n_1 + 1, n_2 + 1, n_3}
         +
@@ -174,9 +174,9 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
         +
         \frac{n!}{n_1!(n_2+1)!(n_3+1)!} \\
         &= 
-        \frac{n!(n_3 + 1 + n_2 + 1 + n_1 + 1)}{(n+1)!(n_2+1)!(n_3+1)!}
+        \frac{n!(n_3 + 1 + n_2 + 1 + n_1 + 1)}{(n_1+1)!(n_2+1)!(n_3+1)!}
         =
-        \frac{(n+1)!}{(n+1)!(n_2+1)!(n_3+1)!}
+        \frac{(n+1)!}{(n_1+1)!(n_2+1)!(n_3+1)!}
         =
         \binom{n+1}{n_1 + 1, n_2 + 1, n_3 + 1}
     \end{align*}
