@@ -207,10 +207,16 @@ $(a_1+\cdots+a_r)^n$, presentamos a continuación una definición de estos núme
 \begin{definicion}
     Dada la potencia $(a_1 +\cdots+ a_r)^n$, llamamos coeficientes multinomiales de orden $n$ con $r$ 
     términos al número de veces que aparece el sumando $a_1^{n_1}\cdots a_r^{n_r}$ con 
-    $n_1 + \cdots + n_r = n$, $0 \le n_i$ al desarrollar la expresión dada, y lo representamos de la forma:
+    $n_1 + \cdots + n_r = n$, $0 \le n_i$ al desarrollar la potencia, y lo representamos de la forma:
     \[
     \binom{n}{n_1, \dots, n_r}
     \]
 \end{definicion}
 
+De la definición precedente tenemos la fórmula multinomial de Newton:
+\[
+(a_1 +\cdots+ a_r)^n 
+=
+\sum_{n_1+\cdots+n_r = n}\binom{n}{n_1, \dots, n_r}a_1^{n_1}\cdots a_r^{n_r}
+\]
 \end{document}
