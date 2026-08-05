@@ -193,7 +193,7 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
         =
         \binom{n}{n_1 + 1, n_2, 0} + \binom{n}{n_1, n_2 + 1, 0}
     \end{align*}
-    Los otros dos casos se razonan analogamente. La última identidad es inmediato.
+    Los otros dos casos se razonan analogamente. La última identidad es inmediata.
     \item Si consideramos cualquier coeficiente trinomial $\tbinom{n}{n_1, n_2, n_3}$,
     podemos permutar los números $n_i$ sin alterar su valor. Para cada coeficiente trinomial 
     existen 6 posibilidades cuando los $n_i$ son diferentes dos a dos.
@@ -201,6 +201,16 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
     Esto es consecuencia directa de la conmutatividad del producto en $\mathbb{N}$.
 \end{enumerate}
 
-%Llegados aquí 
+Llegados aquí, ya nos podemos hacer una idea de como serán los coeficientes multinomiales de una expresión
+$(a_1+\cdots+a_r)^n$, presentamos a continuación una definición de estos números:
+
+\begin{definicion}
+    Dada la potencia $(a_1 +\cdots+ a_r)^n$, llamamos coeficientes multinomiales de orden $n$ con $r$ 
+    términos al número de veces que aparece el sumando $a_1^{n_1}\cdots a_r^{n_r}$ con 
+    $n_1 + \cdots + n_r = n$, $0 \le n_i$ al desarrollar la expresión dada, y lo representamos de la forma:
+    \[
+    \binom{n}{n_1, \dots, n_r}
+    \]
+\end{definicion}
 
 \end{document}
