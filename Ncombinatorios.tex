@@ -217,6 +217,9 @@ De la definición precedente tenemos la fórmula multinomial de Newton:
 \[
 (a_1 +\cdots+ a_r)^n 
 =
-\sum_{n_1+\cdots+n_r = n}\binom{n}{n_1, \dots, n_r}a_1^{n_1}\cdots a_r^{n_r}
+\sum_{\substack{
+    n_1+\cdots+n_r = n \\
+    n_i \ge 0
+}}\binom{n}{n_1, \dots, n_r}a_1^{n_1}\cdots a_r^{n_r}
 \]
 \end{document}
