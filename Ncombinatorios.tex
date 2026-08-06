@@ -202,7 +202,7 @@ Estos números tienen propiedades analogas a las de los combinatorios. Veamos la
 \end{enumerate}
 
 Llegados aquí, ya nos podemos hacer una idea de como serán los coeficientes multinomiales de una expresión
-$(a_1+\cdots+a_r)^n$, presentamos a continuación una definición de estos números:
+$(a_1+\cdots+a_r)^n$. Presentamos a continuación una definición de estos números:
 
 \begin{definicion}
     Dada la potencia $(a_1 +\cdots+ a_r)^n$, llamamos coeficientes multinomiales de orden $n$ con $r$ 
@@ -222,4 +222,31 @@ De la definición precedente tenemos la fórmula multinomial de Newton:
     n_i \ge 0
 }}\binom{n}{n_1, \dots, n_r}a_1^{n_1}\cdots a_r^{n_r}
 \]
+
+En vista de que también ya podemos hacernos una idea de como calcular estos números, presentamos el
+teorema siguiente
+\begin{teorema}
+    Se verifica la igualdad para los naturales que cumplen $n_1 + \cdots + n_r = n$, con $0 \le n_i$:
+    \[
+    \binom{n}{n_1, \dots, n_r}
+    =
+    \frac{n!}{n_1!\cdots n_r!}
+    \]
+\end{teorema}
+
+\begin{proof}
+    Razonamos analogamente al caso de coeficientes trinomiales, o sea queremos calcular de la potencia
+    $(a_1 + \cdots + a_r)^n$ cuantas veces aparece el sumando $a_1^{n_1}\cdots a_r^{n_r}$, con 
+    $n_1 + \cdots + n_r = n$, $n_i \ge 0$. Para ello fijado un indice $1 \le i \le r$ contemos de 
+    cuantas maneras podemos acomodar $n_i$ letras iguales a $a_i$ teniendo en cuenta que quedan 
+    $n_i + \cdots + n_r$ espacios disponibles, ese número es 
+    $\frac{(n_i + \cdots + n_r)!}{(n_{i+1} + \cdots + n_r)!n_i!}$. Entonces, tendremos que:
+    \[
+    \binom{n}{n_1, \dots, n_r}
+    =
+    \prod_{k=1}^{r}\frac{ \left( \sum_{j=k}^{r}n_j \right)! }{\left( \sum_{j=k}^{r}n_{j+1} \right)!n_k!}
+    =
+    \frac{n!}{n_1!, \dots, n_r!}
+    \]
+\end{proof}
 \end{document}
