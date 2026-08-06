@@ -244,9 +244,9 @@ teorema siguiente
     \[
     \binom{n}{n_1, \dots, n_r}
     =
-    \prod_{k=1}^{r}\frac{ \left( \displaystyle\sum_{j=k}^{r}n_j \right)! }{\left( \displaystyle\sum_{j=k}^{r}n_{j+1} \right)!n_k!}
+    \prod_{k=1}^{r}\frac{ \left( \displaystyle\sum_{j=k}^{r}n_j \right)! }{\left( \displaystyle\sum_{j=k+1}^{r}n_j \right)!n_k!}
     =
-    \frac{n!}{n_1!, \dots, n_r!}
+    \frac{n!}{n_1! \cdots n_r!}
     \]
 \end{proof}
 \end{document}
