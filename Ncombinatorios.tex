@@ -249,4 +249,28 @@ teorema siguiente
     \frac{n!}{n_1! \cdots n_r!}
     \]
 \end{proof}
+
+Por supuesto, también tenemos propiedades análogas a las de los combinatorios:
+
+\begin{enumerate}
+    \item Dado el delta de Kronecker $\delta_{i, j}$ se cumplen las siguientes igualdades:
+    \[
+    \binom{n+1}{n_1 + 1, \dots, n_r + 1}
+    =
+    \sum_{i=1}^r \binom{n}{n_1 + 1 - \delta_{i, 1}, \dots, n_r + 1 - \delta_{i, r}}
+    \]
+    \[
+    \binom{n+1}{0, n_2 + 1, \dots, n_r + 1}
+    =
+    \sum_{i=2}^r \binom{n}{0, n_2 + 1 - \delta_{i, 2}, \dots, n_r + 1 - \delta_{i, r}}
+    \]
+    \[
+    \vdots
+    \]
+    \[
+    \binom{n+1}{0, 0, \dots, n_r + 1}
+    =
+    \binom{n}{0, 0, \dots, n_r}
+    \]
+\end{enumerate}
 \end{document}
