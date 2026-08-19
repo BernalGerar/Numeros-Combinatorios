@@ -257,12 +257,12 @@ Por supuesto, también tenemos propiedades análogas a las de los combinatorios:
     \[
     \binom{n+1}{n_1 + 1, \dots, n_r + 1}
     =
-    \sum_{i=1}^r \binom{n}{n_1 + 1 - \delta_{i, 1}, \dots, n_r + 1 - \delta_{i, r}}
+    \sum_{i=1}^r \binom{n}{n_1 + 1 - \delta_{i, 1}, \dots, n_r + 1 - \delta_{i, r}},
     \]
     \[
     \binom{n+1}{0, n_2 + 1, \dots, n_r + 1}
     =
-    \sum_{i=2}^r \binom{n}{0, n_2 + 1 - \delta_{i, 2}, \dots, n_r + 1 - \delta_{i, r}}
+    \sum_{i=2}^r \binom{n}{0, n_2 + 1 - \delta_{i, 2}, \dots, n_r + 1 - \delta_{i, r}},
     \]
     \[
     \vdots
@@ -270,7 +270,29 @@ Por supuesto, también tenemos propiedades análogas a las de los combinatorios:
     \[
     \binom{n+1}{0, 0, \dots, n_r + 1}
     =
-    \binom{n}{0, 0, \dots, n_r}
+    \binom{n}{0, 0, \dots, n_r}.
     \]
+    Razonaremos la primera indentidad, el resto se demuestra análogamente.
+    \begin{align*}
+        &\binom{n+1}{n_1 + 1, \dots, n_r + 1}
+        =
+        \frac{(n+1)!}{(n_1 + 1)!\cdots(n_r + 1)!} \\
+        &=
+        \frac{n+1}{n_1 + 1}
+        \cdot
+        \binom{n}{n_1, \dots, n_r + 1}
+        =
+        \frac{(n_1 + 1) + \cdots + (n_r + 1)}{n_1 + 1}
+        \cdot
+        \binom{n}{n_1, \dots, n_r + 1} \\
+        &=
+        \sum_{i=1}^{r}\frac{n_i + 1}{n_1 + 1} \cdot \binom{n}{n_1, \dots, n_r + 1}
+        =
+        \sum_{i=1}^r \binom{n}{n_1 + 1 - \delta_{i, 1}, \dots, n_r + 1 - \delta_{i, r}}
+    \end{align*}
+    \item Si consideramos cualquier coeficiente multinomial $\tbinom{n}{n_1, \dots, n_r}$,
+    podemos permutar los $n_i$ números sin alterar su valor.
+
+    Esto es inmediato.
 \end{enumerate}
 \end{document}
